@@ -3,11 +3,10 @@
 class Solution {
 public:
     int singleNumber(vector<int>& nums) {
+        int res = 0;
         for(int elem: nums){
-            if(count(nums.begin(), nums.end(), elem) != 2){
-                return elem;
-            }
+            res = res ^ elem;
         }
-        return nums[0];
+        return res;
     }
 };
