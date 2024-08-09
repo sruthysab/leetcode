@@ -7,14 +7,9 @@ public:
     int missingInteger(vector<int>& nums) {
         int sumLSP = nums[0];
         
-        int i = 1;
-        while(i < nums.size()){
-            if(nums[i] == nums[i-1]+1){
-                sumLSP += nums[i];
-            }else{
-                break;
-            }
-            i++;
+        for(int i = 1; i < nums.size(); i++){
+            if(nums[i] == nums[i-1]+1) sumLSP += nums[i];
+            else break;
         }
         
         cout << sumLSP << endl;
