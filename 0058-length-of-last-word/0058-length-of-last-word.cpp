@@ -4,7 +4,9 @@ public:
         int n = s.length()-1;
         int lastWordLen = 0;
         
-      
+        if(s.length() == 1){
+            return 1;
+        }
         
         while(n > -1){
             if(s[n] == ' '){
