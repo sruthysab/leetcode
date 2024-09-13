@@ -3,25 +3,24 @@ public:
     bool isIsomorphic(string s, string t) {
         if(s.length() != t.length()) return false;
         
-        unordered_map<char,char>m1,m2;
+        unordered_map<char,char>isoS,isoT;
         
 
         for(int i = 0 ; i < s.size() ; i++){
-            char ch1 = s[i];
-            char ch2 = t[i];
+            char currS = s[i];
+            char currT = t[i];
 
-            if(m1.find(ch1) != m1.end()){
-                if(ch2 != m1[ch1]){
+            if(isoS.find(currS) != isoS.end()){
+                if(currT != isoS[currS]){
                     return false;
                 }
-            }else{
-                if(m2.find(ch2) != m2.end()){
+            }else if(isoT.find(currT) != isoT.end()){
                     return false;
-                }
+                
             }
   
-            m1[ch1] = ch2;
-            m2[ch2] = ch1;
+            isoS[currS] = currT;
+            isoT[currT] = currS;
             
         }
         return true;
