@@ -21,7 +21,9 @@ public:
         int res = (node->val >= maxVal) ? 1 : 0;
         maxVal = max(maxVal, node->val);
         
-        return res + dfs(node->left, maxVal) + dfs(node->right, maxVal);
+        res += dfs(node->left, maxVal);
+        res += dfs(node->right, maxVal);
+        return res;
     }
     
     int goodNodes(TreeNode* root) {
