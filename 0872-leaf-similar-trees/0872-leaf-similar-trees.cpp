@@ -27,9 +27,7 @@ public:
     bool leafSimilar(TreeNode* root1, TreeNode* root2) {
         dfs(root1, leaf1);
         dfs(root2, leaf2);
-        if(leaf1.size() != leaf2.size()){
-            return false;
-        }
+        
         return leaf1 == leaf2;
     }
 };
