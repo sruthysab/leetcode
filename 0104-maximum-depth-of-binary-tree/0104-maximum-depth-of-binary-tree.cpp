@@ -23,8 +23,8 @@ public:
             
             if(node != nullptr){
                 maxDepth = max(maxDepth, depth);
-                tree.push({node->right, depth+1});
                 tree.push({node->left, depth+1});
+                tree.push({node->right, depth+1});
             }
         }
         return maxDepth;
