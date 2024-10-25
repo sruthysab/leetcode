@@ -14,7 +14,7 @@ public:
         ListNode* curr = head;
         int n = 0;
         
-        // Count total nodes in the list
+        // Calculate the length of the linked list
         while (curr) {
             n++;
             curr = curr->next;
@@ -22,14 +22,15 @@ public:
         
         // Reset curr to head
         curr = head;
-        vector<int> firstHalf(n / 2);
+        vector<int> firstHalf; // No need to predefine size
         int maxSum = INT_MIN;
         
         int i = 0;
-        // Traverse the list to fill first half
+        // Traverse the list to handle pair sums
         while (curr) {
             if (i < n / 2) {
-                firstHalf[i] = curr->val; // Store first half values
+                // Store values from the first half
+                firstHalf.push_back(curr->val);
             } else {
                 // Add the mirrored values from the second half
                 int pairSum = firstHalf[n - i - 1] + curr->val;
