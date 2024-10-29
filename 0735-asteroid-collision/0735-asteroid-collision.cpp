@@ -11,7 +11,6 @@ public:
                     collision.pop();
                 } else if(collision.top() == -asteroids[i]){ // both equal
                     collision.pop();
-                    cout << "set to true" << asteroids[i] << endl;
                     currDestroyed = true;
                     break;
                 } else {
