@@ -14,7 +14,6 @@ public:
                     currDestroyed = true;
                     break;
                 } else {
-                    cout << "also set to true" << asteroids[i] << endl;
                     currDestroyed = true; //current asteroid destroyed bc asteroid in stack larger
                     break;
                 }
