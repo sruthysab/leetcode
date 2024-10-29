@@ -22,7 +22,7 @@ public:
                 reverse(letters.begin(), letters.end()); //reverse string of letters
                 reverse(numbers.begin(), numbers.end()); //reverse string of numbers
                 
-                int repeatCount = std::stoi(numbers); // convert string to int
+                int repeatCount = stoi(numbers); // convert string to int
 
                 string repeated = ""; //create new repeated string
                 for (int j = 0; j < repeatCount; j++) {
