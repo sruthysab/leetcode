@@ -4,12 +4,7 @@ public:
         int len = flowerbed.size();
         
         // Edge case for flowerbed of length 1
-        if (len == 1) {
-            if (flowerbed[0] == 0 && n <= 1) {
-                return true;
-            }
-            return n == 0;
-        } else if (n == 0){
+        if ((len == 1 && flowerbed[0] == 0 && n <= 1) || n == 0) {
             return true;
         }
         
