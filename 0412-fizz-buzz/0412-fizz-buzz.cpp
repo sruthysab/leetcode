@@ -12,7 +12,7 @@ public:
             } else if(i%5 == 0) {
                 result[i-1] = "Buzz";
             } else {
-                result[i-1] = to_string(i);
+                result[i-1] = to_string(i); //i + '0' only for single digit numbers
             }
         }
         return result;
