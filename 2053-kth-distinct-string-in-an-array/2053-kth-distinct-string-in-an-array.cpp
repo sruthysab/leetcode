@@ -7,7 +7,6 @@ public:
             strCount[str]++;
         }
         
-        int i = 0;
         for(const auto& str : arr){
             if(strCount[str] == 1){
                 k--;
