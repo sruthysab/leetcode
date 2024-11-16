@@ -1,6 +1,6 @@
 class Solution {
 private:
-    bool checkCharRank(const string& a, const string& b, unordered_map<char, int> charRank){
+    bool checkCharRank(const string& a, const string& b, unordered_map<char, int>& charRank){
         int minLen = min(a.length(), b.length());
         for(int i = 0; i < minLen; i++){
             if(a[i] != b[i]){
