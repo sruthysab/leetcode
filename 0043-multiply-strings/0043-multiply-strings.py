@@ -32,18 +32,18 @@ class Solution(object):
                 digit = num1 % 10
                 result.append(digit_to_char[digit])
                 num1 = num1//10
-            return result[::-1] #reverse to get correct string
-        
+            return ''.join(result[::-1])  # Reverse to get the correct string
+
         numC1 = convertToInt(num1)
         numC2 = convertToInt(num2)
-        
-        result = 0;
+    
+        result = 0
         for i, char in enumerate(reversed(num2)):
             result += numC1 * charToDigit[char] * (10 ** i)
-        
+    
         resultStr = convertToStr(result)
-        if(isNeg):
-            return '-'+ "".join(resultStr)
-        
-        return "".join(resultStr)
+        if isNeg:
+            return '-' + resultStr
+    
+        return resultStr
         
