@@ -31,7 +31,7 @@ class Solution(object):
             while num1 > 0:
                 digit = num1 % 10
                 result.append(digit_to_char[digit])
-                num1 = num1/10
+                num1 = num1//10
             return result[::-1] #reverse to get correct string
         
         numC1 = convertToInt(num1)
